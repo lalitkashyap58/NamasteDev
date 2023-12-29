@@ -30,4 +30,9 @@ Episode 3
 Answer:Components are Arrow function returning some JSX and ReactELemennt does not return JSX , it simple JS object .
 
 
+Episode4
 
+props, objects ,APIs, 
+why we can't use index as the key?
+destructuring 
+map,filter, reduce
