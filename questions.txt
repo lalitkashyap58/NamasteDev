@@ -1,0 +1,33 @@
+what is cors?
+what is cdn ?
+how to use react with cdn?
+what is React.createElement?
+
+root.render -> it converts all the react code into html that browser understands
+
+
+//chapter --2
+Difference between dev dependency and normal dependency
+
+parcel
+--dev build
+--caching things so that you can build faster 
+-- has a watching algorithm - written in c++
+--image optimisation 
+--minification of files also
+--compressing of files
+--code spitting
+--consistent Hashing
+--error handling
+--tree shaking - remove unused code
+
+
+Episode 3
+--React.createElement()=>ReactELemennt, JS object => HTMLRender
+--JSX is transpiled before it reaches the JS engine
+
+--Difference between React Element and components
+Answer:Components are Arrow function returning some JSX and ReactELemennt does not return JSX , it simple JS object .
+
+
+

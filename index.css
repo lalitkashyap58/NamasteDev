@@ -1,0 +1,40 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8; /* Light background color for the entire page */
+  }
+  
+  .header {
+    background-color: #FF6347; /* Coral color for the header background */
+    color: #fff; /* White text color for better contrast */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+    border: solid;
+  }
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 50px;
+  }
+  
+  .nav-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-items li {
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  
+  .nav-items li:hover {
+    text-decoration: underline; /* Underline on hover for better feedback */
+  }
+  
