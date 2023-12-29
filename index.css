@@ -1,40 +1,103 @@
 /* styles.css */
+*{
+  margin: 0;
+}
+.body {
+  margin: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f8f8; /* Light background color for the entire page */
-  }
-  
-  .header {
-    background-color: #FF6347; /* Coral color for the header background */
-    color: #fff; /* White text color for better contrast */
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
-    border: solid;
-  }
-  
-  .logo img {
-    max-width: 100%;
-    max-height: 50px;
-  }
-  
-  .nav-items ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .nav-items li {
-    margin: 0 15px;
-    cursor: pointer;
-  }
-  
-  .nav-items li:hover {
-    text-decoration: underline; /* Underline on hover for better feedback */
-  }
-  
+.header {
+  background-color: #fc8019;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 40px;
+}
+
+.nav-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-items li {
+  margin: 0 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-items li:hover {
+  text-decoration: underline;
+}
+
+
+.search {
+  margin: 20px 0;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.res-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+/* Adjusted to space items evenly */
+}
+
+.res-card {
+  background-color: #e9b714;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.res-card:hover {
+  transform: scale(1.05);
+}
+
+.food-image img {
+  width: 100%; 
+  height: 13rem;
+ 
+  border-radius: 8px;
+}
+
+.food-heading {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #fc8019;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add more styles as needed */
