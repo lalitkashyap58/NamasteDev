@@ -103,3 +103,9 @@
 }
 
 /* Add more styles as needed */
+.filter-btn{
+  margin: 10px;
+  background: #55600e;
+  cursor:pointer;
+
+}

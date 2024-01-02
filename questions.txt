@@ -36,3 +36,25 @@ props, objects ,APIs,
 why we can't use index as the key?
 destructuring 
 map,filter, reduce
+
+
+Episode5-------------------------------------------------------------------
+
+
+React Hooks-
+(Normal js utility functions )
+
+  two very important Hooks 
+   --useState, --useEffect
+  useState=this is used to create state variable 
+  useEffect=
+
+
+  Virtual DOM- this is the representation of Actual Dom.
+            -  it is  a js object.
+
+            How it gets updated-
+             it compares the new and old virtual DOM ,and updates the child.
+
+Episode 6 (most important)
+        
