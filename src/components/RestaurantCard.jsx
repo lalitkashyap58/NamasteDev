@@ -1,7 +1,6 @@
 import { CND_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
     const { name, cloudinaryImageId ,avgRating} = props?.data.info;
-    console.log(name);
     return (
         <div className="res-card">
             <div className="food-image">

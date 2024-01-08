@@ -57,4 +57,12 @@ React Hooks-
              it compares the new and old virtual DOM ,and updates the child.
 
 Episode 6 (most important)
+        API call - fetch and axios
+        Shimmer - UI - the UI build instead of loader
+        useState importance - becauase there is no way that react can track of change in variable but when we use usestate , it rerenders as soos as the state of variable changes.
+        Whenever local state variable updates, the whole component gets rerendered .
+
+        
+
+
         
