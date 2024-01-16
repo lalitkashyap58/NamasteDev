@@ -1,31 +1,24 @@
 import React from 'react'
-import { useEffect } from 'react'
 import Shimmer from './Shimmer';
-import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {Menu} from "../utils/constants.js";
+
+import useRestaurantMenu from '../utils/useRestaurantMenu';
+
 
 const RestaurantMenu = () => {
-    const [resInfo,setResInfo]=useState(null);
+   
     const {resId} =useParams();
     console.log(resId);
+    const resInfo=useRestaurantMenu(resId);
+    
+    console.log(resInfo);
 
    
 
 //explain useEffect and learn about it 
 
-    useEffect(()=>{
-  fetchMenu();
-  console.log("useeffect called");
-    },[]);
-    const fetchMenu= async ()=>{
-        const data=  await fetch(Menu+resId);
-        const json=await data.json();
-    
-        setResInfo(json.data);
-        
-    
-    };
+ 
+  
 
     if(resInfo===null)
     return (<h1>abhi load ho rhe hn</h1>);

@@ -15,7 +15,9 @@ setLogin("logout")
       
       <div className="header">
         <div className="logo">
+          <Link>
           <img src={LOGO_URL} alt="Logo" />
+          </Link>
         </div>
         <div className="nav-items">
           <ul>

@@ -80,3 +80,16 @@ Episode 7 : (path -browserrouter, router provider)
 
              
 
+             Episode 8 : Class based components
+                        - how we can create class based components 
+                        - how you can pass props in class components
+                        -why do we write props in super everytime we receive props .
+                        -order of life cycle in class based components .
+                        -how the class and child components gets rendered and component did mount get called how it is done , and how react is optimising .
+
+
+              Episode 9:  -custom Hooks , and Hooks are nothing but the utility function;   
+                         -concept of lazy loading - the component which has lot of content and function , you have to make a seperate bundle for it to improve optimisation.
+   
+              Episode 10:
+
