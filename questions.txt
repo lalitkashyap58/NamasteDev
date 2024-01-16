@@ -62,7 +62,21 @@ Episode 6 (most important)
         useState importance - becauase there is no way that react can track of change in variable but when we use usestate , it rerenders as soos as the state of variable changes.
         Whenever local state variable updates, the whole component gets rerendered .
 
-        
-
 
         
+
+Episode 7 : (path -browserrouter, router provider)
+             nested routes - means we render component according to path in a layout .
+             imp->Link- it avoid rendering of the whole component while anchor tag causes to rerender the whole page 
+            
+            # 2 types of Routing in web apps
+             Client side Routing - client already has all the components and they are called single page application 
+             but while doing normal routing , we make calls to load the components that makes app slow.
+             Server Side Routing
+
+
+             Dynamic Routing - using Params .
+                               more better use of map functinality.
+
+             
+
