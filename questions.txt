@@ -105,4 +105,6 @@ Episode 6 (most important)------------------------------------------------------
                                   --context provider.
             Episode 12:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                         --Redux: (Redux is not mandatory ,we need to think when we should use it)
-                        
+                        --Redux and React are different things ,Redux is a seperate library
+                        --Redux ToolKit and React Redux
+                        --Build Cart with Redux

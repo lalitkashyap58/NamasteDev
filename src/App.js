@@ -12,6 +12,9 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext.js";
+import { Provider } from "react-redux";//provider is like a bridge between react redux and redux toolkit
+import appStore from "./utils/appStore.js";
+import Cart from "./components/Cart.jsx";
 
 // const Header = () => {
 //   return (
@@ -124,6 +127,8 @@ const AppLayout = () => {
 
   
   return (
+    <Provider store={appStore}>
+
     <UserContext.Provider value={{loggedInUser:userName}}>
 
     <>
@@ -133,6 +138,8 @@ const AppLayout = () => {
       
     </>
     </UserContext.Provider>
+    </Provider>
+
 
   );
 };
@@ -155,6 +162,9 @@ const appRouter=createBrowserRouter([
       },{
         path:"/restaurant/:resId",
         element:<RestaurantMenu/>
+      },{
+        path:"/cart",
+        element:<Cart/>
       }
     ],
 
