@@ -1,17 +1,17 @@
 // App.jsx
 
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "../index.css"; // Make sure to import your styles
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter ,RouterProvider,Outlet } from "react-router-dom";
-
+import { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-
+import UserContext from "./utils/UserContext.js";
 
 // const Header = () => {
 //   return (
@@ -109,13 +109,31 @@ const RestaurantCard = (props) => {
 // };
 
 const AppLayout = () => {
+
+  //authentication
+  const [userName,setUserName]=useState();
+
+  useEffect(()=>{
+    //Make an Api call and send username and password
+    const data={
+      name:"Lalit Kashyap"
+    }
+    setUserName(data.name);
+
+  },[]);
+
+  
   return (
+    <UserContext.Provider value={{loggedInUser:userName}}>
+
     <>
       <Header />
       <Outlet/>
          
       
     </>
+    </UserContext.Provider>
+
   );
 };
 

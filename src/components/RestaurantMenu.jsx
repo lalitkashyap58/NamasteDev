@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Shimmer from './Shimmer';
 import { useParams } from 'react-router-dom';
 
 import useRestaurantMenu from '../utils/useRestaurantMenu';
+import RestaurantCategory from './RestaurantCategory';
 
 
 const RestaurantMenu = () => {
@@ -11,8 +12,8 @@ const RestaurantMenu = () => {
     console.log(resId);
     const resInfo=useRestaurantMenu(resId);
     
-    console.log(resInfo);
-
+   const [showIndex,setShowIndex]=useState(null);
+   const[showItems,setShowItems]=useState(false);
    
 
 //explain useEffect and learn about it 
@@ -26,7 +27,9 @@ const RestaurantMenu = () => {
     console.log(resInfo);
      const {name,cuisines,costForTwo}=resInfo?.cards[0]?.card?.card?.info;
      const itemCards=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card.card;
-     console.log(itemCards);
+     const categories=resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+     console.log(categories);
+
     //  {itemCards.map((item, index) => (
     //   <li key={index}>{console.log(item.card.info.name)}</li>
     // ))}
@@ -35,28 +38,19 @@ const RestaurantMenu = () => {
    
 
   return resInfo ===null ?(<Shimmer/>):(
-    <div className='menu'>
+    <div className='text-center'>
        
-        <h1>{name}</h1>
+        <h1 className='font-bold my-6 text-2xl'>{name}</h1>
 
-        <p>{cuisines.join(", ")}-{costForTwo}</p>
-        <h1>Menu</h1>
+        <p className='font-bold text-lg'>{cuisines.join(", ")}-{costForTwo} for Two</p>
         
-        
-        <ul>
-        {itemCards.itemCards.map((item, index) => (
-  
-  <li key={index}>{item?.card?.info?.name}</li>
-
-))}
+      {/* categoeries accordian */}
+    {categories.map((category,index)=>(
+<RestaurantCategory key={category?.card?.card.title} data={category?.card?.card} showItems={index===showIndex?true:false} setShowIndex={()=>{setShowIndex(index)}} setShowItems={()=>{!showItems}}/>
+    ))}
 
 
-           
-
-            <li>{costForTwo}</li>
-            <li>Diet Coke</li>
-        </ul>
-        RestaurantMenu</div>
+        </div>
   )
 }
 

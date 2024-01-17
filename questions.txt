@@ -6,7 +6,7 @@ what is React.createElement?
 root.render -> it converts all the react code into html that browser understands
 
 
-//chapter --2
+//chapter --2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Difference between dev dependency and normal dependency
 
 parcel
@@ -22,7 +22,7 @@ parcel
 --tree shaking - remove unused code
 
 
-Episode 3
+Episode 3---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --React.createElement()=>ReactELemennt, JS object => HTMLRender
 --JSX is transpiled before it reaches the JS engine
 
@@ -30,7 +30,7 @@ Episode 3
 Answer:Components are Arrow function returning some JSX and ReactELemennt does not return JSX , it simple JS object .
 
 
-Episode4
+Episode4---------------------------------------------------------------------------------------------------------------------------
 
 props, objects ,APIs, 
 why we can't use index as the key?
@@ -56,7 +56,7 @@ React Hooks-
             How it gets updated-
              it compares the new and old virtual DOM ,and updates the child.
 
-Episode 6 (most important)
+Episode 6 (most important)--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         API call - fetch and axios
         Shimmer - UI - the UI build instead of loader
         useState importance - becauase there is no way that react can track of change in variable but when we use usestate , it rerenders as soos as the state of variable changes.
@@ -65,7 +65,7 @@ Episode 6 (most important)
 
         
 
-Episode 7 : (path -browserrouter, router provider)
+     Episode 7 : (path -browserrouter, router provider)--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
              nested routes - means we render component according to path in a layout .
              imp->Link- it avoid rendering of the whole component while anchor tag causes to rerender the whole page 
             
@@ -80,7 +80,7 @@ Episode 7 : (path -browserrouter, router provider)
 
              
 
-             Episode 8 : Class based components
+             Episode 8 : Class based components--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                         - how we can create class based components 
                         - how you can pass props in class components
                         -why do we write props in super everytime we receive props .
@@ -88,8 +88,21 @@ Episode 7 : (path -browserrouter, router provider)
                         -how the class and child components gets rendered and component did mount get called how it is done , and how react is optimising .
 
 
-              Episode 9:  -custom Hooks , and Hooks are nothing but the utility function;   
+              Episode 9:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        -custom Hooks , and Hooks are nothing but the utility function;   
                          -concept of lazy loading - the component which has lot of content and function , you have to make a seperate bundle for it to improve optimisation.
    
-              Episode 10:
-
+              Episode 11:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                          --Higher order component => it takes input as the component and return the enhanced component.
+                          --spread operator 
+                          --controlled Component- the parent component controlling the child component.
+                          --Lifting the stateup (important concept)
+                          --prop drilling (we should avoid it )
+                               --React Context is used to avoid prop drilling.
+                                  --example- logged in userInfo is required in multiple components.
+                                  --theme info - dark and white so we use context api here .
+                                  --context is like store where we can store the data or props.
+                                  --context provider.
+            Episode 12:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        --Redux: (Redux is not mandatory ,we need to think when we should use it)
+                        

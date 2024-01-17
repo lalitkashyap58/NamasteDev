@@ -1,8 +1,10 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 const Header = () => {
   const [login,setLogin]=useState("login");
+  const {loggedInUser}=useContext(UserContext);
 
   const changeStatus=()=>{
     if(login=="login")
@@ -22,7 +24,7 @@ setLogin("logout")
         <div className="nav-items">
           <ul>
             
-            <li>
+            <li >
              <Link to="/">
              Home
              </Link>
@@ -42,6 +44,7 @@ setLogin("logout")
             <button className="login-btn" onClick={()=>{
               changeStatus();
             }}>{login}</button>
+            <li className="px-4 font-bold">{loggedInUser}</li>
           </ul>
         </div>
       </div>
