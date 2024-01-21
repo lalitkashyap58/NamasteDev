@@ -2,6 +2,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import Carousel from "./Carousel";
+import useData from "../utils/useData";
 const Body = () => {
 
 
@@ -10,6 +12,7 @@ const Body = () => {
 
     const [searchText, setSearchText]=useState("");
     const[filteredRestaurants,setFilteredRestaurants]=useState([]);
+    const [carouselList,setCarouselList]=useState([]);
 
     
     useEffect(()=>{
@@ -24,13 +27,16 @@ const Body = () => {
     
      
    
-   
+     
+     const carouselData=useData(json,"whats_on_your_mind");
+
  
      const restaurant=json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
      console.log(restaurant);
      setFilteredRestaurants(restaurant);
      setListOfRestaurants(restaurant);
-     
+     setCarouselList(carouselData);
+
     
     };
 
@@ -75,7 +81,9 @@ const Body = () => {
                     Top Rated Restaurant
                 </button>
             </div>
-            <div className="res-list">
+            <Carousel list={carouselList}/>
+
+            <div className="res-list w-full">
                 {filteredRestaurants.map((restaurant,index) => {
                     return <Link to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard  data={restaurant} /></Link>;
                 })}
